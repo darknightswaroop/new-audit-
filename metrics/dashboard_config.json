@@ -1,0 +1,36 @@
+{
+    "dashboards": {
+        "audit_metrics": {
+            "title": "SALLMA Audit Metrics",
+            "refresh": "30s",
+            "last_updated": "2025-07-27 14:34:14",
+            "updated_by": "swaroop-thakare",
+            "panels": [
+                {
+                    "title": "Decision Distribution",
+                    "type": "gauge",
+                    "metric": "sallma_decision_total",
+                    "groupBy": ["decision_type", "user"]
+                },
+                {
+                    "title": "Confidence Score Trends",
+                    "type": "graph",
+                    "metric": "sallma_confidence_score",
+                    "groupBy": ["decision_type"]
+                },
+                {
+                    "title": "Agent Voting Patterns",
+                    "type": "heatmap",
+                    "metric": "sallma_agent_votes",
+                    "groupBy": ["agent_name", "vote_type"]
+                },
+                {
+                    "title": "Processing Time",
+                    "type": "graph",
+                    "metric": "sallma_processing_time",
+                    "groupBy": ["operation_type"]
+                }
+            ]
+        }
+    }
+}

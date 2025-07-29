@@ -1,0 +1,29 @@
+metrics:
+  prometheus:
+    gateway: "localhost:9091"
+    job_prefix: "sallma_audit"
+  
+  gauges:
+    - name: "decision_total"
+      description: "Total decisions by type and outcome"
+      labels: ["decision_type", "outcome", "user"]
+    
+    - name: "confidence_score"
+      description: "Decision confidence scores"
+      labels: ["decision_type", "user"]
+    
+    - name: "agent_votes"
+      description: "Agent voting patterns"
+      labels: ["agent_name", "vote_type", "user"]
+    
+    - name: "processing_time"
+      description: "Processing time for audit operations"
+      labels: ["operation_type", "user"]
+    
+    - name: "rules_triggered"
+      description: "Number of rules triggered per decision"
+      labels: ["decision_type", "user"]
+
+  defaults:
+    current_time: "2025-07-27 14:34:14"
+    current_user: "swaroop-thakare"
